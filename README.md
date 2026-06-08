@@ -185,10 +185,22 @@ Interests:  AI/ML, Computer Vision, Backend Engineering, Cloud, Cyber Security
 
 ---
 
-## 🏆 GitHub Trophies
+## 💡 Random Dev Quote
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=22MIS1157&theme=tokyonight&column=7&no-frame=true&no-bg=true&margin-w=6" />
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Dev Quote" />
+</div>
+
+<br/>
+
+## 🔭 Currently Exploring
+
+<div align="center">
+
+| 🧠 Agentic AI & Multi-Agent Systems | 🔐 Cyber Security & Threat Intelligence | ☸️ Cloud-Native & Orchestration |
+|:---:|:---:|:---:|
+| Building autonomous AI agents that reason, plan, and execute complex workflows | CTF competitions, vulnerability assessment, attack surface monitoring | Scaling ML pipelines with Kubernetes, serverless, and event-driven architectures |
+
 </div>
 
 ---
