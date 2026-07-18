@@ -1,251 +1,90 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 668.0 644" width="668.0" height="644">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 596.0 580" width="596.0" height="580">
 <rect width="100%" height="100%" fill="#0d1117"/>
 <style>
-  text { font-family: monospace; font-size: 12px; fill: #c0c0c0; dominant-baseline: hanging; }
-  @keyframes reveal-row-0 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-1 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-2 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-3 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-4 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-5 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-6 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-7 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-8 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-9 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-10 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-11 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-12 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-13 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-14 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-15 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-16 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-17 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-18 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-19 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-20 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-21 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-22 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-23 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-24 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-25 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-26 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-27 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-28 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-29 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-30 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-31 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-32 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-33 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-34 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-35 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-36 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-37 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-38 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-39 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-40 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-41 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-42 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-43 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-44 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-45 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-46 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes reveal-row-47 {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0% 0 0); }
-  }
-  @keyframes blink { 0%,49% { opacity:1 } 50%,100% { opacity:0 } }
+  text { font-family: 'Courier New', Courier, monospace; font-size: 11px; fill: #c0c0c0; dominant-baseline: hanging; white-space: pre; }
+  @keyframes rr0 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr1 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr2 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr3 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr4 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr5 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr6 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr7 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr8 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr9 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr10 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr11 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr12 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr13 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr14 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr15 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr16 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr17 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr18 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr19 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr20 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr21 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr22 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr23 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr24 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr25 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr26 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr27 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr28 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr29 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr30 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr31 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr32 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr33 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr34 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr35 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr36 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr37 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr38 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
+  @keyframes rr39 { 0% { clip-path: inset(0 100% 0 0); } 100% { clip-path: inset(0 0% 0 0); } }
 </style>
-<text x="10" y="10" style="animation: reveal-row-0 0.15s 0.0s linear forwards; clip-path: inset(0 100% 0 0);">%%###%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
-<text x="10" y="23" style="animation: reveal-row-1 0.15s 0.04s linear forwards; clip-path: inset(0 100% 0 0);">%%%%%%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
-<text x="10" y="36" style="animation: reveal-row-2 0.15s 0.08s linear forwards; clip-path: inset(0 100% 0 0);">%%%##%%%@@%%%%%%%%%%%%%%%%%%%%%%%%%%%%@@@@@@@@@@@%%%%%%%%%%%%@@@%%%%%%@@%%%%%%%@@@@@@@@@@@</text>
-<text x="10" y="49" style="animation: reveal-row-3 0.15s 0.12s linear forwards; clip-path: inset(0 100% 0 0);">%%%##%%%%%%%%%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%%@@@@@@@@@@@@@@@@@@@@</text>
-<text x="10" y="62" style="animation: reveal-row-4 0.15s 0.16s linear forwards; clip-path: inset(0 100% 0 0);">%%%%##%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%@@@@@@@@@@</text>
-<text x="10" y="75" style="animation: reveal-row-5 0.15s 0.2s linear forwards; clip-path: inset(0 100% 0 0);">%%%##%%%%%%%%%%%%%%%###sssssssssssssssssssssssssssssccccccccccccccccccccccccccc#%@@@@@@@@@</text>
-<text x="10" y="88" style="animation: reveal-row-6 0.15s 0.24s linear forwards; clip-path: inset(0 100% 0 0);">%%##%%%%%%%%%%%%%%%%#####ssssssssssssssssssssssssssccccccccccccccccccccccccccccs%@@@@@@@@@</text>
-<text x="10" y="101" style="animation: reveal-row-7 0.15s 0.28s linear forwards; clip-path: inset(0 100% 0 0);">%%##%%%%%%%%%%%%%%########sssssscccccccccccccccccccc******cccccccssssssccccsscs#%@@@@@@@@@</text>
-<text x="10" y="114" style="animation: reveal-row-8 0.15s 0.32s linear forwards; clip-path: inset(0 100% 0 0);">%%###%%%%%%%%%%%%###%%%%%%%%##################################%%%%%%%%%%##%%%%%%@@@@@@@@@@</text>
-<text x="10" y="127" style="animation: reveal-row-9 0.15s 0.36s linear forwards; clip-path: inset(0 100% 0 0);">%%####%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
-<text x="10" y="140" style="animation: reveal-row-10 0.15s 0.4s linear forwards; clip-path: inset(0 100% 0 0);">%%#####%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%@@@@@@@@@@@@</text>
-<text x="10" y="153" style="animation: reveal-row-11 0.15s 0.44s linear forwards; clip-path: inset(0 100% 0 0);">%%####%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
-<text x="10" y="166" style="animation: reveal-row-12 0.15s 0.48s linear forwards; clip-path: inset(0 100% 0 0);">%%###%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
-<text x="10" y="179" style="animation: reveal-row-13 0.15s 0.52s linear forwards; clip-path: inset(0 100% 0 0);">%%###%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%@@@@@@@@@@</text>
-<text x="10" y="192" style="animation: reveal-row-14 0.15s 0.56s linear forwards; clip-path: inset(0 100% 0 0);">%%%##%%%###%#######%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
-<text x="10" y="205" style="animation: reveal-row-15 0.15s 0.6s linear forwards; clip-path: inset(0 100% 0 0);">%%%%####%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%###ssssssssssssssss##############%@%%%%%@@@@</text>
-<text x="10" y="218" style="animation: reveal-row-16 0.15s 0.64s linear forwards; clip-path: inset(0 100% 0 0);">%%%#####s#%%%%%%##############%###%###sss##sscc**+=====++**ccsss###############s%@%%%%%%%%</text>
-<text x="10" y="231" style="animation: reveal-row-17 0.15s 0.68s linear forwards; clip-path: inset(0 100% 0 0);">%%###%#s###%#%%%%%%%#%%%%%%%#%###ssscccssc**cc*c**+==++*ccccss################%s#@%%%%%%%%</text>
-<text x="10" y="244" style="animation: reveal-row-18 0.15s 0.72s linear forwards; clip-path: inset(0 100% 0 0);">%%####%#%%%###%%%%%%%%%##%%%%%%#s##%%%#%%####scc*++==+*ccccsss#################s%@%%%%%%%%</text>
-<text x="10" y="257" style="animation: reveal-row-19 0.15s 0.76s linear forwards; clip-path: inset(0 100% 0 0);">%%####%%#################%%####%%%%%%##############sssssssssss#################%@%%%%%%%%%</text>
-<text x="10" y="270" style="animation: reveal-row-20 0.15s 0.8s linear forwards; clip-path: inset(0 100% 0 0);">%%#####%####################################%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%%%%@%%</text>
-<text x="10" y="283" style="animation: reveal-row-21 0.15s 0.84s linear forwards; clip-path: inset(0 100% 0 0);">%%%%%%%%#################%%%%%%%%##########%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%@@@@@</text>
-<text x="10" y="296" style="animation: reveal-row-22 0.15s 0.88s linear forwards; clip-path: inset(0 100% 0 0);">%%%%%%%%%%%%%%%%%%%%####%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
-<text x="10" y="309" style="animation: reveal-row-23 0.15s 0.92s linear forwards; clip-path: inset(0 100% 0 0);">%%%%%%%%%####%%%%%%%%##%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
-<text x="10" y="322" style="animation: reveal-row-24 0.15s 0.96s linear forwards; clip-path: inset(0 100% 0 0);">%%%#%%%%%%%##%%%%%%%###%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@</text>
-<text x="10" y="335" style="animation: reveal-row-25 0.15s 1.0s linear forwards; clip-path: inset(0 100% 0 0);">%%%%%%%%%%#######%%%##%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@</text>
-<text x="10" y="348" style="animation: reveal-row-26 0.15s 1.04s linear forwards; clip-path: inset(0 100% 0 0);">%%%%%%%####%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%@@@@@@@@@@</text>
-<text x="10" y="361" style="animation: reveal-row-27 0.15s 1.08s linear forwards; clip-path: inset(0 100% 0 0);">%%%%%%%%###%%%%%%%%####%%###################################################%%%%%@@@@@@@@@</text>
-<text x="10" y="374" style="animation: reveal-row-28 0.15s 1.12s linear forwards; clip-path: inset(0 100% 0 0);">%%%%%%%##%%%%%%%%%%%#%%%%%%##################%%%%%#############%%%%%%%%%%%%%##%%%@@@@@@@@@</text>
-<text x="10" y="387" style="animation: reveal-row-29 0.15s 1.16s linear forwards; clip-path: inset(0 100% 0 0);">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%######%%@@@@@@@@@</text>
-<text x="10" y="400" style="animation: reveal-row-30 0.15s 1.2s linear forwards; clip-path: inset(0 100% 0 0);">%%%%%%%%%#####%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#######%%@@@@@@@@@</text>
-<text x="10" y="413" style="animation: reveal-row-31 0.15s 1.24s linear forwards; clip-path: inset(0 100% 0 0);">%%%%%%%%%######%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%######%%@@@@@@@@@</text>
-<text x="10" y="426" style="animation: reveal-row-32 0.15s 1.28s linear forwards; clip-path: inset(0 100% 0 0);">@%%%%%%%%%#######%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%####%%@@@@@@@@@</text>
-<text x="10" y="439" style="animation: reveal-row-33 0.15s 1.32s linear forwards; clip-path: inset(0 100% 0 0);">@%%%%%%%%%%######%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%####%%%@@@@@@@@</text>
-<text x="10" y="452" style="animation: reveal-row-34 0.15s 1.36s linear forwards; clip-path: inset(0 100% 0 0);">%%%%%%%%%%######%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%####%%@@@@@@@@@</text>
-<text x="10" y="465" style="animation: reveal-row-35 0.15s 1.4000000000000001s linear forwards; clip-path: inset(0 100% 0 0);">@%%%%%%%%%######%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#######%%@@@@@@@@@</text>
-<text x="10" y="478" style="animation: reveal-row-36 0.15s 1.44s linear forwards; clip-path: inset(0 100% 0 0);">@%%%%%%%%%##########%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%##########%###########%%@@@@@@@@@</text>
-<text x="10" y="491" style="animation: reveal-row-37 0.15s 1.48s linear forwards; clip-path: inset(0 100% 0 0);">@%@@@%%%%%########%###%%%%%%%%%%%%%#####%#%%%%%%###############################%%@@@@@@@@@</text>
-<text x="10" y="504" style="animation: reveal-row-38 0.15s 1.52s linear forwards; clip-path: inset(0 100% 0 0);">@@@@@%%%%%#####################################################################%%@@%%@@@@@</text>
-<text x="10" y="517" style="animation: reveal-row-39 0.15s 1.56s linear forwards; clip-path: inset(0 100% 0 0);">@@@@@@%%%#########################################ss#####ssssss################%@@@%%@@@@@</text>
-<text x="10" y="530" style="animation: reveal-row-40 0.15s 1.6s linear forwards; clip-path: inset(0 100% 0 0);">@@@@@@@%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%@@@@%@@@@@@</text>
-<text x="10" y="543" style="animation: reveal-row-41 0.15s 1.6400000000000001s linear forwards; clip-path: inset(0 100% 0 0);">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
-<text x="10" y="556" style="animation: reveal-row-42 0.15s 1.68s linear forwards; clip-path: inset(0 100% 0 0);">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
-<text x="10" y="569" style="animation: reveal-row-43 0.15s 1.72s linear forwards; clip-path: inset(0 100% 0 0);">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
-<text x="10" y="582" style="animation: reveal-row-44 0.15s 1.76s linear forwards; clip-path: inset(0 100% 0 0);">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
-<text x="10" y="595" style="animation: reveal-row-45 0.15s 1.8s linear forwards; clip-path: inset(0 100% 0 0);">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
-<text x="10" y="608" style="animation: reveal-row-46 0.15s 1.84s linear forwards; clip-path: inset(0 100% 0 0);">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
-<text x="10" y="621" style="animation: reveal-row-47 0.15s 1.8800000000000001s linear forwards; clip-path: inset(0 100% 0 0);">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%%%%%%%%%%%%@%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%@@@@@@</text>
-<rect x="10" width="8" height="13" fill="#c0c0c0" opacity="0.8">
-  <animate attributeName="y" values="10;23;36;49;62;75;88;101;114;127;140;153;166;179;192;205;218;231;244;257;270;283;296;309;322;335;348;361;374;387;400;413;426;439;452;465;478;491;504;517;530;543;556;569;582;595;608;621" dur="2.07s" fill="freeze"/>
-  <animate attributeName="opacity" values="0.8;0" begin="2.07s" dur="0.3s" fill="freeze"/>
+<text x="10" y="10" xml:space="preserve" style="animation: rr0 0.12s 0.000s linear forwards; clip-path: inset(0 100% 0 0);">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</text>
+<text x="10" y="24" xml:space="preserve" style="animation: rr1 0.12s 0.040s linear forwards; clip-path: inset(0 100% 0 0);">%%#%%%%#%%%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</text>
+<text x="10" y="38" xml:space="preserve" style="animation: rr2 0.12s 0.080s linear forwards; clip-path: inset(0 100% 0 0);">%%#%%%s+++++++++++++++++++++++++++*++++==~~=~~==~====~~=====~========~*%%%%%%%%%</text>
+<text x="10" y="52" xml:space="preserve" style="animation: rr3 0.12s 0.120s linear forwards; clip-path: inset(0 100% 0 0);">%%#%%%s+***+++++++++++*+*********++++=====++++++++==++=+==+++++=======*%%%%%%%%%</text>
+<text x="10" y="66" xml:space="preserve" style="animation: rr4 0.12s 0.160s linear forwards; clip-path: inset(0 100% 0 0);">%%#%%%s+***+++++++**++++===========~~===============+*+*==+===========*%%%%%%%%%</text>
+<text x="10" y="80" xml:space="preserve" style="animation: rr5 0.12s 0.200s linear forwards; clip-path: inset(0 100% 0 0);">%%#%%%s+***++++++++++**********c*cc*cccccc*cccccccccccccccccccc+=====~*%%%%%%%%%</text>
+<text x="10" y="94" xml:space="preserve" style="animation: rr6 0.12s 0.240s linear forwards; clip-path: inset(0 100% 0 0);">%%#%%%s+**+++++++++++***cscssssssssssssssssssssssssssssssssssss*=~~==~*%%%%%%%%%</text>
+<text x="10" y="108" xml:space="preserve" style="animation: rr7 0.12s 0.280s linear forwards; clip-path: inset(0 100% 0 0);">%%#%%%s+***+**++++********cccccccccccccccccsssssccccccccccccccc*======*%%%%%%%%%</text>
+<text x="10" y="122" xml:space="preserve" style="animation: rr8 0.12s 0.320s linear forwards; clip-path: inset(0 100% 0 0);">%%#%%%s+***+++++++++++++++++++++++++++++======================+=~=~==~*%%%%%%%%%</text>
+<text x="10" y="136" xml:space="preserve" style="animation: rr9 0.12s 0.360s linear forwards; clip-path: inset(0 100% 0 0);">%%#%%%s+***++++++++++++++++++++++++++++++==+==++=++=+==+++++=+~~~~~==~*%%%%%%%%%</text>
+<text x="10" y="150" xml:space="preserve" style="animation: rr10 0.12s 0.400s linear forwards; clip-path: inset(0 100% 0 0);">%%#%%%s+****++++++++++*++*+++++*++*++***+=============================*%%%%%%%%%</text>
+<text x="10" y="164" xml:space="preserve" style="animation: rr11 0.12s 0.440s linear forwards; clip-path: inset(0 100% 0 0);">%%#%%%s+**++++++++**++++++++++++++++++++++=================+==+=~~~~=~*%%%%%%%%%</text>
+<text x="10" y="178" xml:space="preserve" style="animation: rr12 0.12s 0.480s linear forwards; clip-path: inset(0 100% 0 0);">%%#%%%s++**++*++++**++++++++++++++++++++++++++++++++++=++++++++======~*%%%%%%%%%</text>
+<text x="10" y="192" xml:space="preserve" style="animation: rr13 0.12s 0.520s linear forwards; clip-path: inset(0 100% 0 0);">%%#%%%s+****c*++++***************ccc*cccssssssssssssc**c**cc**c*+***+=c%%%%%%%%%</text>
+<text x="10" y="206" xml:space="preserve" style="animation: rr14 0.12s 0.560s linear forwards; clip-path: inset(0 100% 0 0);">%%#%%%s+********+++++*+++++***ccccccssss#ss#ssssssc************c=+****c%%%%%%%%%</text>
+<text x="10" y="220" xml:space="preserve" style="animation: rr15 0.12s 0.600s linear forwards; clip-path: inset(0 100% 0 0);">%%#%%%s+***++++**+++++**+++++*++++*+****cccsssssccc************+=+++*+c%%%%%%%%%</text>
+<text x="10" y="234" xml:space="preserve" style="animation: rr16 0.12s 0.640s linear forwards; clip-path: inset(0 100% 0 0);">%%#%%%s+*******************************+++=====+=++=++=+++++++++****++c%%%%%%%%%</text>
+<text x="10" y="248" xml:space="preserve" style="animation: rr17 0.12s 0.680s linear forwards; clip-path: inset(0 100% 0 0);">%%#%%%s+++++**+**+******++++++********+++++++++++++++++++++++++++++===*%%%%%%%%%</text>
+<text x="10" y="262" xml:space="preserve" style="animation: rr18 0.12s 0.720s linear forwards; clip-path: inset(0 100% 0 0);">%%#%%%s+++++++++++++++*+++++++++++++++++++++++++===~~~~~~~~~~~~~~~~~=~*%%%%%%%%%</text>
+<text x="10" y="276" xml:space="preserve" style="animation: rr19 0.12s 0.760s linear forwards; clip-path: inset(0 100% 0 0);">%%#%%%s+***++******+***++*+++++*++*++**++++*++**+**++=~===============*%%%%%%%%%</text>
+<text x="10" y="290" xml:space="preserve" style="animation: rr20 0.12s 0.800s linear forwards; clip-path: inset(0 100% 0 0);">%%#%%%s+++++**++++*++*+++++++++++++++++++++++++++++++=============~==~*%%%%%%%%%</text>
+<text x="10" y="304" xml:space="preserve" style="animation: rr21 0.12s 0.840s linear forwards; clip-path: inset(0 100% 0 0);">%%#%%%s+++++**++++++***++**************+*+*********************+=~~~=~*%%%%%%%%%</text>
+<text x="10" y="318" xml:space="preserve" style="animation: rr22 0.12s 0.880s linear forwards; clip-path: inset(0 100% 0 0);">%%#%%%s+**++**+++++++*+++**************+++**********++++++******======*%%%%%%%%%</text>
+<text x="10" y="332" xml:space="preserve" style="animation: rr23 0.12s 0.920s linear forwards; clip-path: inset(0 100% 0 0);">%%#%%%s+***+*****+++++*++++++++++++++++++++++++++++++++*+**c****======*%%%%%%%%%</text>
+<text x="10" y="346" xml:space="preserve" style="animation: rr24 0.12s 0.960s linear forwards; clip-path: inset(0 100% 0 0);">%%#%%%s++++++****++++++++++++++++++++++++++++++++++++++++++****+=~~~=~*%%%%%%%%%</text>
+<text x="10" y="360" xml:space="preserve" style="animation: rr25 0.12s 1.000s linear forwards; clip-path: inset(0 100% 0 0);">%%%%%%c+*+++++*****+++++++++++++++++++++++++++++++++++++++++****+=~==~*%%%%%%%%%</text>
+<text x="10" y="374" xml:space="preserve" style="animation: rr26 0.12s 1.040s linear forwards; clip-path: inset(0 100% 0 0);">%%%%%%s+***+*******+++*++*+++++*++*++*+++++*++*+++*++++*+*******+=====*%%%%%%%%%</text>
+<text x="10" y="388" xml:space="preserve" style="animation: rr27 0.12s 1.080s linear forwards; clip-path: inset(0 100% 0 0);">%%%%%%c=*+++++*****++++++++++++++++++++++++++++++++++++++******+=~~~=~*%%%%%%%%%</text>
+<text x="10" y="402" xml:space="preserve" style="animation: rr28 0.12s 1.120s linear forwards; clip-path: inset(0 100% 0 0);">%%%%%%c+++++***********+**+++++********+************************==~==~*%%%%%%%%%</text>
+<text x="10" y="416" xml:space="preserve" style="animation: rr29 0.12s 1.160s linear forwards; clip-path: inset(0 100% 0 0);">%%%%%%c===+*******************************cc***cccc********c****==+===*%%%%%%%%%</text>
+<text x="10" y="430" xml:space="preserve" style="animation: rr30 0.12s 1.200s linear forwards; clip-path: inset(0 100% 0 0);">%%%%%%c~===+***********************************c*cc************=~++==~*%%%%%%%%%</text>
+<text x="10" y="444" xml:space="preserve" style="animation: rr31 0.12s 1.240s linear forwards; clip-path: inset(0 100% 0 0);">%%%%%%c~==~====================+++++++++++=====================~~==~=~*%%%%%%%%%</text>
+<text x="10" y="458" xml:space="preserve" style="animation: rr32 0.12s 1.280s linear forwards; clip-path: inset(0 100% 0 0);">%%%%%%c===========================++***+==============================*%%%%%%%%%</text>
+<text x="10" y="472" xml:space="preserve" style="animation: rr33 0.12s 1.320s linear forwards; clip-path: inset(0 100% 0 0);">%%%%%%c~===========================~===~=============================~*%%%%%%%%%</text>
+<text x="10" y="486" xml:space="preserve" style="animation: rr34 0.12s 1.360s linear forwards; clip-path: inset(0 100% 0 0);">%%#%%%c~=====================++~~==~~==~==~==========================~*%%%%%%%%%</text>
+<text x="10" y="500" xml:space="preserve" style="animation: rr35 0.12s 1.400s linear forwards; clip-path: inset(0 100% 0 0);">%%#%%%c~=======================+========+=============================*%%%%%%%%%</text>
+<text x="10" y="514" xml:space="preserve" style="animation: rr36 0.12s 1.440s linear forwards; clip-path: inset(0 100% 0 0);">%%#%%%#sss#s################################s######################s#s#%%%%%%%%%</text>
+<text x="10" y="528" xml:space="preserve" style="animation: rr37 0.12s 1.480s linear forwards; clip-path: inset(0 100% 0 0);">%%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</text>
+<text x="10" y="542" xml:space="preserve" style="animation: rr38 0.12s 1.520s linear forwards; clip-path: inset(0 100% 0 0);">%%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</text>
+<text x="10" y="556" xml:space="preserve" style="animation: rr39 0.12s 1.560s linear forwards; clip-path: inset(0 100% 0 0);">%%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</text>
+<rect x="10" width="7" height="14" fill="#c0c0c0" opacity="0.9">
+  <animate attributeName="y" values="10;24;38;52;66;80;94;108;122;136;150;164;178;192;206;220;234;248;262;276;290;304;318;332;346;360;374;388;402;416;430;444;458;472;486;500;514;528;542;556" dur="1.7200000000000002s" fill="freeze"/>
+  <animate attributeName="opacity" values="0.9;0" begin="1.7200000000000002s" dur="0.3s" fill="freeze"/>
 </rect>
 </svg>
