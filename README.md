@@ -1,40 +1,19 @@
 <div align="center">
-  
-  <!-- Animated Header -->
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:161b22,100:00e5ff&height=220&section=header&text=Afnaan%20Ahmed%20P&fontSize=52&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=AI%20%2F%20ML%20Engineer%20%E2%80%A2%20Backend%20Developer%20%E2%80%A2%20Software%20Engineer&descAlignY=55&descSize=18&descColor=a9b1d6" width="100%"/>
-  
-  <!-- Typing SVG -->
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=3000&pause=1000&color=00E5FF&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=80&lines=Building+intelligent+systems+that+learn+and+scale+%F0%9F%A7%A0;From+Deep+Learning+models+to+production+APIs+%F0%9F%9A%80" alt="Typing SVG" />
-  </a>
+
+<h3><code>afnaan@github ~ $ ./contributions.sh</code></h3>
+<img src="./contrib-heatmap.svg" width="860" />
+
+<br><br>
+
+<h3><code>afnaan@github ~ $ whoami</code></h3>
+<table>
+  <tr>
+    <td valign="top"><img src="./afnaan-ascii.svg" width="370" /></td>
+    <td valign="top"><img src="./info-card.svg" width="490" /></td>
+  </tr>
+</table>
 
 </div>
-
-<!-- Social Badges -->
-<p align="center">
-  <a href="https://linkedin.com/in/afnaan22mis1157"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="mailto:Afnaanahmed.k391@gmail.com"><img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-  <a href="https://github.com/22MIS1157"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
-  <img src="https://komarev.com/ghpvc/?username=22MIS1157&color=00e5ff&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile Views" />
-</p>
-
----
-
-## 🧑‍💻 About Me
-
-```yaml
-Name:       Afnaan Ahmed P
-University: VIT Chennai — M.Tech Integrated, Software Engineering (2022–2027)
-CGPA:       7.92 / 10.0 | 66 Subjects Completed | No Backlogs
-Location:   Tamil Nadu, India
-Interests:  AI/ML, Computer Vision, Backend Engineering, Cloud, Cyber Security
-```
-
-- 🔬 **4 production-grade projects** across Computer Vision, NLP, Generative AI & Backend Engineering  
-- 🏥 **Research Intern** at CHAIR, VIT Chennai — built a clinical AI model (96% accuracy, AUC 0.98)  
-- 🔒 **Core Member, Cybersecurity Division** — Microsoft Innovations Club, VIT Chennai  
-- ☁️ Deployed **serverless applications on AWS** (Lambda, S3, DynamoDB, API Gateway)  
-- 🐳 Experience with **Docker, Kubernetes, CI/CD pipelines** for production deployments  
 
 ---
 
@@ -164,35 +143,6 @@ Interests:  AI/ML, Computer Vision, Backend Engineering, Cloud, Cyber Security
 
 ---
 
-## 📊 GitHub Analytics
-
-<div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=22MIS1157&show_icons=true&theme=tokyonight&bg_color=0d1117&title_color=00e5ff&text_color=a9b1d6&icon_color=00e5ff&border_color=161b22&border_radius=12&include_all_commits=true&count_private=true" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=22MIS1157&layout=compact&theme=tokyonight&bg_color=0d1117&title_color=00e5ff&text_color=a9b1d6&border_color=161b22&border_radius=12&langs_count=8" />
-</div>
-
-<br/>
-
-<div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=22MIS1157&theme=tokyonight&background=0d1117&fire=00e5ff&ring=00e5ff&currStreakLabel=00e5ff&sideLabels=a9b1d6&border=161b22&border_radius=12" />
-</div>
-
-<br/>
-
-<div align="center">
-  <img width="95%" src="https://github-readme-activity-graph.vercel.app/graph?username=22MIS1157&bg_color=0d1117&color=00e5ff&line=00e5ff&point=ffffff&area=true&area_color=00e5ff&hide_border=true&custom_title=Contribution%20Graph" />
-</div>
-
----
-
-## 💡 Random Dev Quote
-
-<div align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Dev Quote" />
-</div>
-
-<br/>
-
 ## 🔭 Currently Exploring
 
 <div align="center">
@@ -206,18 +156,16 @@ Interests:  AI/ML, Computer Vision, Backend Engineering, Cloud, Cyber Security
 ---
 
 <div align="center">
-  
-  <!-- Snake Animation -->
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/22MIS1157/22MIS1157/output/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/22MIS1157/22MIS1157/output/github-snake.svg" />
-    <img alt="github contribution snake animation" src="https://raw.githubusercontent.com/22MIS1157/22MIS1157/output/github-snake-dark.svg" />
-  </picture>
 
-</div>
+<!-- Social Links -->
+<a href="https://linkedin.com/in/afnaan22mis1157"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+<a href="mailto:Afnaanahmed.k391@gmail.com"><img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+<a href="https://github.com/22MIS1157"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+<a href="https://22mis1157.github.io"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" /></a>
+<img src="https://komarev.com/ghpvc/?username=22MIS1157&color=00e5ff&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile Views" />
 
----
+<br><br>
 
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:161b22,100:00e5ff&height=120&section=footer" width="100%"/>
+<sub>This profile's contribution heatmap and ASCII art are self-hosted SVGs — no third-party services. Refreshed daily by <a href=".github/workflows/update-profile-art.yml">GitHub Actions</a>.</sub>
+
 </div>
