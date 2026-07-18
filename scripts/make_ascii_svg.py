@@ -1,102 +1,115 @@
 """
-Convert the prepped Gemini ASCII art image into a self-typing monochrome SVG.
+Embed the Gemini-generated ASCII art image directly into an SVG
+with a top-to-bottom scanline reveal animation.
 
-Since the source is already a halftone/dot-pattern image with extreme contrast,
-we use a wide character grid (120+ cols) and a refined density ramp for maximum
-fidelity. The result should look very close to the Gemini original.
+Instead of converting pixels to characters (which destroys quality),
+this embeds the raster image as base64 inside the SVG and uses a
+CSS clip-path animation to reveal it progressively from top to bottom,
+simulating a CRT/terminal printing effect.
 
-Animation: each row wipes left-to-right with staggered timing + a cursor block.
-Plays once and freezes (no looping).
+A glowing green scanline rides the reveal edge for extra effect.
 """
-import numpy as np
-from PIL import Image
+import base64
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
-# Fine-grained density ramp (16 levels) - bright to dark
-RAMP = " .'`^\",:;Il!i><~+_-?][}{1)(|/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$"
-
-COLS = 120
-CHAR_W = 6.6
-CHAR_H = 12
-FG = "#b0b8c0"          # cool gray on dark background
-BG = "#0d1117"           # GitHub dark
-FONT = "'Courier New', Courier, monospace"
-FONT_SIZE = 10
-ROW_DELAY = 0.03         # seconds between each row start
-ROW_DUR = 0.08           # seconds for each row to fully reveal
-
-
-def brightness_to_char(val):
-    """Map pixel brightness (0=black, 255=white) to ASCII char.
-    Dark pixels -> dense characters (end of ramp).
-    Bright pixels -> sparse characters / space (start of ramp).
-    """
-    idx = int((1.0 - val / 255.0) * (len(RAMP) - 1))
-    return RAMP[max(0, min(len(RAMP) - 1, idx))]
+BG = "#0d1117"
+SCANLINE_COLOR = "#39d353"  # GitHub green
+ANIM_DURATION = 2.5  # seconds for full reveal
 
 
 def main():
-    img = Image.open(str(ROOT / "data" / "source-prepped.png")).convert("L")
-    w, h = img.size
+    src = sys.argv[1] if len(sys.argv) > 1 else str(ROOT / "source-photo.png")
+    print(f"[ascii] Loading {src}")
 
-    # Compute rows to maintain aspect ratio
-    char_aspect = CHAR_W / CHAR_H
-    img_aspect = w / h
-    ROWS = int(COLS / img_aspect * char_aspect)
+    # Read image and base64 encode it
+    with open(src, "rb") as f:
+        img_bytes = f.read()
+    b64 = base64.b64encode(img_bytes).decode("ascii")
 
-    print(f"[ascii] Image {w}x{h}, grid {COLS}x{ROWS}")
+    # Get image dimensions
+    from PIL import Image
+    import io
+    img = Image.open(io.BytesIO(img_bytes))
+    img_w, img_h = img.size
+    print(f"[ascii] Image size: {img_w}x{img_h}")
 
-    img = img.resize((COLS, ROWS), Image.LANCZOS)
-    pixels = np.array(img)
+    # SVG dimensions with padding
+    pad = 16
+    svg_w = img_w + pad * 2
+    svg_h = img_h + pad * 2
 
-    svg_w = COLS * CHAR_W + 20
-    svg_h = ROWS * CHAR_H + 20
+    svg = []
+    svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" '
+               f'xmlns:xlink="http://www.w3.org/1999/xlink" '
+               f'viewBox="0 0 {svg_w} {svg_h}" width="{svg_w}" height="{svg_h}">')
 
-    lines = []
-    lines.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {svg_w} {svg_h}" width="{svg_w}" height="{svg_h}">')
-    lines.append(f'<rect width="100%" height="100%" fill="{BG}"/>')
-    lines.append('<style>')
-    lines.append(f'  text {{ font-family: {FONT}; font-size: {FONT_SIZE}px; fill: {FG}; dominant-baseline: hanging; white-space: pre; }}')
+    # Dark background
+    svg.append(f'<rect width="100%" height="100%" rx="8" fill="{BG}"/>')
 
-    # One keyframe rule per row
-    for r in range(ROWS):
-        lines.append(f'  @keyframes rr{r} {{ 0% {{ clip-path: inset(0 100% 0 0); }} 100% {{ clip-path: inset(0 0% 0 0); }} }}')
+    # Styles and animations
+    svg.append('<style>')
+    svg.append(f'''
+    @keyframes reveal {{
+        0%   {{ clip-path: inset(0 0 100% 0); }}
+        100% {{ clip-path: inset(0 0 0% 0); }}
+    }}
+    @keyframes scanline-move {{
+        0%   {{ transform: translateY(0px); opacity: 1; }}
+        95%  {{ transform: translateY({img_h}px); opacity: 1; }}
+        100% {{ transform: translateY({img_h}px); opacity: 0; }}
+    }}
+    @keyframes glow-pulse {{
+        0%, 100% {{ opacity: 0.4; }}
+        50%      {{ opacity: 0.8; }}
+    }}
+    .ascii-img {{
+        animation: reveal {ANIM_DURATION}s linear forwards;
+        clip-path: inset(0 0 100% 0);
+    }}
+    .scanline {{
+        animation: scanline-move {ANIM_DURATION}s linear forwards;
+    }}
+    .scanline-glow {{
+        animation: scanline-move {ANIM_DURATION}s linear forwards,
+                   glow-pulse 0.15s ease-in-out infinite;
+    }}
+    ''')
+    svg.append('</style>')
 
-    lines.append('</style>')
+    # Embedded image with reveal animation
+    svg.append(f'<image class="ascii-img" x="{pad}" y="{pad}" '
+               f'width="{img_w}" height="{img_h}" '
+               f'href="data:image/png;base64,{b64}" '
+               f'preserveAspectRatio="xMidYMid meet"/>')
 
-    # Render each row as a <text> element with clip animation
-    for r in range(ROWS):
-        row_chars = ''.join(brightness_to_char(pixels[r, c]) for c in range(COLS))
-        # XML-escape special characters
-        row_chars = (row_chars
-                     .replace('&', '&amp;')
-                     .replace('<', '&lt;')
-                     .replace('>', '&gt;')
-                     .replace('"', '&quot;')
-                     .replace("'", '&apos;'))
-        y = 10 + r * CHAR_H
-        delay = r * ROW_DELAY
-        lines.append(
-            f'<text x="10" y="{y}" xml:space="preserve" '
-            f'style="animation: rr{r} {ROW_DUR}s {delay:.3f}s linear forwards; '
-            f'clip-path: inset(0 100% 0 0);">{row_chars}</text>'
-        )
+    # Scanline effect (thin bright line that rides the reveal edge)
+    svg.append(f'<g class="scanline" transform="translate(0, {pad})">')
+    # Main scanline
+    svg.append(f'  <rect x="{pad}" y="0" width="{img_w}" height="2" '
+               f'fill="{SCANLINE_COLOR}" opacity="0.9"/>')
+    # Glow behind scanline
+    svg.append(f'  <rect class="scanline-glow" x="{pad}" y="-3" '
+               f'width="{img_w}" height="8" fill="{SCANLINE_COLOR}" '
+               f'opacity="0.3" filter="url(#blur)"/>')
+    svg.append('</g>')
 
-    # Animated cursor that moves down row-by-row
-    cursor_ys = [str(10 + r * CHAR_H) for r in range(ROWS)]
-    total_time = ROWS * ROW_DELAY + ROW_DUR
-    lines.append(f'<rect x="10" width="6" height="{CHAR_H}" fill="{FG}" opacity="0.85">')
-    lines.append(f'  <animate attributeName="y" values="{";".join(cursor_ys)}" dur="{total_time}s" fill="freeze"/>')
-    lines.append(f'  <animate attributeName="opacity" values="0.85;0" begin="{total_time}s" dur="0.3s" fill="freeze"/>')
-    lines.append('</rect>')
+    # Blur filter for the glow
+    svg.append('<defs>')
+    svg.append('  <filter id="blur"><feGaussianBlur stdDeviation="3"/></filter>')
+    svg.append('</defs>')
 
-    lines.append('</svg>')
+    # Subtle border
+    svg.append(f'<rect width="100%" height="100%" rx="8" fill="none" '
+               f'stroke="#30363d" stroke-width="1"/>')
+
+    svg.append('</svg>')
 
     out = ROOT / "afnaan-ascii.svg"
-    out.write_text('\n'.join(lines), encoding='utf-8')
-    print(f"[ascii] Written {out} ({COLS}x{ROWS} chars, {len(lines)} SVG lines)")
+    out.write_text('\n'.join(svg), encoding='utf-8')
+    print(f"[ascii] Written {out} ({len(svg)} SVG lines, ~{len(b64)//1024}KB base64)")
 
 
 if __name__ == "__main__":
