@@ -1,15 +1,26 @@
 <div align="center">
 
-<h3><code>afnaan@github ~ $ ./contributions.sh</code></h3>
+<!-- Cyberpunk Glitch Header -->
+<img src="./header.svg" width="860" />
+
+<br>
+
+<!-- Social Links -->
+<a href="https://linkedin.com/in/afnaan22mis1157"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+<a href="mailto:Afnaanahmed.k391@gmail.com"><img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+<a href="https://github.com/22MIS1157"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+<a href="https://22mis1157.github.io"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" /></a>
+<img src="https://komarev.com/ghpvc/?username=22MIS1157&color=00e5ff&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile Views" />
+
+<br><br>
+
+<!-- Live Contribution Heatmap -->
+<h3><code>afnaan@github ~ $ cat contributions.log</code></h3>
 <img src="./contrib-heatmap.svg" width="860" />
 
 <br><br>
 
-<h3><code>afnaan@github ~ $ whoami</code></h3>
-<img src="./afnaan-ascii.svg" width="860" />
-
-<br><br>
-
+<!-- Neofetch System Profiler -->
 <h3><code>afnaan@github ~ $ neofetch</code></h3>
 <img src="./info-card.svg" width="860" />
 
@@ -157,15 +168,6 @@
 
 <div align="center">
 
-<!-- Social Links -->
-<a href="https://linkedin.com/in/afnaan22mis1157"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-<a href="mailto:Afnaanahmed.k391@gmail.com"><img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-<a href="https://github.com/22MIS1157"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
-<a href="https://22mis1157.github.io"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" /></a>
-<img src="https://komarev.com/ghpvc/?username=22MIS1157&color=00e5ff&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile Views" />
-
-<br><br>
-
-<sub>This profile's contribution heatmap and ASCII art are self-hosted SVGs — no third-party services. Refreshed daily by <a href=".github/workflows/update-profile-art.yml">GitHub Actions</a>.</sub>
+<sub>✨ Profile animations are self-hosted SVGs — no third-party services. Heatmap refreshes daily via <a href=".github/workflows/update-profile-art.yml">GitHub Actions</a>.</sub>
 
 </div>
