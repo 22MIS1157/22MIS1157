@@ -35,19 +35,6 @@ def main():
     
     days.sort(key=lambda d: d["date"])
 
-    # Simulate realistic active contributions from Jan 1st, 2026 to today
-    import random
-    today = datetime.now().strftime("%Y-%m-%d")
-    for d in days:
-        if "2026-01-01" <= d["date"] <= today:
-            # Seed with date for consistent pattern
-            rnd = random.Random(d["date"] + "afnaan")
-            # 68% chance of having contributions
-            if rnd.random() < 0.68:
-                count = rnd.randint(1, 10)
-                level = 1 if count <= 2 else (2 if count <= 5 else (3 if count <= 8 else 4))
-                d["count"] = count
-                d["level"] = level
 
     
     total = sum(d["count"] for d in days)
