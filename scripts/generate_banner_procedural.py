@@ -1,12 +1,11 @@
 """
-Master SMIL Banner Generator v3 with Procedural Vector Logos:
-- 100% Crisp & Iconic Procedural Vector Geometry for 3 Logos:
-  1. Sharingan Eye 👁️ (Naruto Tomoe Ring & Pupil)
-  2. </ > Programmer Code Glyph 💻 (Brackets & Slash)
-  3. One Piece Strawhat Jolly Roger 🏴‍☠️ (Skull & Crossbones)
-- Hungarian Optimal Transport alignment between all 3 logos for fluid particle morphing.
-- High-density Floyd-Steinberg dithered portrait (Layer 1) visible instantly on load.
-- Terminal UI with glowing cyan corner brackets, macOS traffic light buttons, and purple email pill.
+Master Banner Generator with 3 Professional Developer Logos:
+1. Python Logo 🐍 (Dual interlocking snakes)
+2. </ > Programmer Code Glyph 💻 (Brackets & Slash)
+3. Git Branch & Commit Nodes 🔀 (Branching workflow)
+
+Morphing sequence:
+Portrait (0s-3s) ➔ Python 🐍 (4.3s-6.3s) ➔ </ > Code 💻 (7.6s-9.6s) ➔ Git Branch 🔀 (10.9s-12.9s) ➔ Return to Portrait
 """
 import os
 import random
@@ -65,43 +64,18 @@ def floyd_steinberg_dither(img):
                 
     return result
 
-def generate_sharingan(num_points=900, w=290, h=350):
+def generate_python_logo(num_points=900, w=290, h=350):
     cx, cy = w / 2, h / 2
     pts = []
-    
-    # Outer circle
-    r_outer = 85
-    n_out = int(num_points * 0.35)
-    for theta in np.linspace(0, 2*math.pi, n_out, endpoint=False):
-        pts.append((cx + r_outer * math.cos(theta), cy + r_outer * math.sin(theta)))
-        
-    # Inner tomoe ring
-    r_ring = 54
-    n_ring = int(num_points * 0.25)
-    for theta in np.linspace(0, 2*math.pi, n_ring, endpoint=False):
-        pts.append((cx + r_ring * math.cos(theta), cy + r_ring * math.sin(theta)))
-        
-    # Center pupil
-    n_pupil = int(num_points * 0.15)
-    rnd = random.Random(42)
-    for _ in range(n_pupil):
-        r = rnd.uniform(0, 18)
-        theta = rnd.uniform(0, 2*math.pi)
-        pts.append((cx + r * math.cos(theta), cy + r * math.sin(theta)))
-        
-    # 3 Tomoe commas (0, 120, 240 deg)
-    n_tomoe = (num_points - len(pts)) // 3
-    for angle_deg in [0, 120, 240]:
-        base_angle = math.radians(angle_deg)
-        tx = cx + r_ring * math.cos(base_angle)
-        ty = cy + r_ring * math.sin(base_angle)
-        for _ in range(n_tomoe):
-            rh = rnd.uniform(0, 10)
-            th = rnd.uniform(0, 2*math.pi)
-            pts.append((tx + rh * math.cos(th), ty + rh * math.sin(th)))
-            
-    while len(pts) < num_points:
-        pts.append(pts[-1])
+    n_loop = num_points // 2
+    for t in np.linspace(0, 2*math.pi, n_loop):
+        x = cx - 18 + 48 * math.cos(t) * abs(math.cos(t))**0.3
+        y = cy - 28 + 48 * math.sin(t) * abs(math.sin(t))**0.3
+        pts.append((x, y))
+    for t in np.linspace(0, 2*math.pi, num_points - n_loop):
+        x = cx + 18 + 48 * math.cos(t) * abs(math.cos(t))**0.3
+        y = cy + 28 + 48 * math.sin(t) * abs(math.sin(t))**0.3
+        pts.append((x, y))
     return np.array(pts[:num_points])
 
 def generate_code_glyph(num_points=900, w=290, h=350):
@@ -123,36 +97,25 @@ def generate_code_glyph(num_points=900, w=290, h=350):
         x = cx + 45 + (1 - abs(t - 0.5)*2) * 50
         y = cy - 60 + t * 120
         pts.append((x, y))
-        
-    while len(pts) < num_points:
-        pts.append(pts[-1])
     return np.array(pts[:num_points])
 
-def generate_onepiece(num_points=900, w=290, h=350):
+def generate_git_branch(num_points=900, w=290, h=350):
     cx, cy = w / 2, h / 2
     pts = []
-    
-    # Crossbones (X shape)
-    n_bones = int(num_points * 0.35)
-    for t in np.linspace(0, 1, n_bones // 2):
-        pts.append((cx - 80 + t * 160, cy - 80 + t * 160))
-        pts.append((cx - 80 + t * 160, cy + 80 - t * 160))
-        
-    # Skull Head
-    n_skull = int(num_points * 0.3)
-    for theta in np.linspace(0, 2*math.pi, n_skull, endpoint=False):
-        pts.append((cx + 40 * math.cos(theta), cy + 12 + 40 * math.sin(theta)))
-        
-    # Straw Hat Dome
-    n_hat = int(num_points * 0.2)
-    for theta in np.linspace(math.pi*0.8, math.pi*2.2, n_hat):
-        pts.append((cx + 45 * math.cos(theta), cy - 18 + 35 * math.sin(theta)))
-        
-    # Straw Hat Brim
-    n_brim = num_points - len(pts)
-    for t in np.linspace(-70, 70, n_brim):
-        pts.append((cx + t, cy - 12))
-        
+    n_stem = int(num_points * 0.4)
+    for t in np.linspace(0, 1, n_stem):
+        pts.append((cx - 30, cy - 70 + t * 140))
+    n_branch = int(num_points * 0.3)
+    for t in np.linspace(0, 1, n_branch):
+        x = cx - 30 + t * 65
+        y = cy - 10 - math.sin(t * math.pi) * 38
+        pts.append((x, y))
+    n_nodes = num_points - len(pts)
+    nodes = [(cx - 30, cy - 70), (cx - 30, cy + 70), (cx + 35, cy - 48)]
+    for i, (nx, ny) in enumerate(nodes):
+        n_c = n_nodes // 3
+        for theta in np.linspace(0, 2*math.pi, n_c):
+            pts.append((nx + 14 * math.cos(theta), ny + 14 * math.sin(theta)))
     return np.array(pts[:num_points])
 
 def align_points(pts_a, pts_b):
@@ -226,7 +189,6 @@ def generate_svg(dot_matrix, logo1_pts, logo2_pts, logo3_pts, palette, is_dark, 
     svg = []
     svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 610" width="1180" height="610" style="background-color: {bg_color}; font-family: monospace;">')
     
-    # CSS Styles
     svg.append('<style>')
     svg.append('.pulse { animation: p 2s infinite; }')
     svg.append('@keyframes p { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }')
@@ -237,7 +199,7 @@ def generate_svg(dot_matrix, logo1_pts, logo2_pts, logo3_pts, palette, is_dark, 
     svg.append(f'<rect x="10" y="10" width="1160" height="590" rx="12" ry="12" fill="none" stroke="{chrome_color}" stroke-width="1.5" opacity="0.6"/>')
     svg.append(f'<line x1="10" y1="42" x2="1170" y2="42" stroke="{chrome_color}" stroke-width="1" opacity="0.3"/>')
     
-    # Traffic Light Buttons (Red, Yellow, Green)
+    # Traffic Light Control Buttons
     svg.append('<circle cx="32" cy="26" r="5" fill="#FF5F56"/>')
     svg.append('<circle cx="48" cy="26" r="5" fill="#FFBD2E"/>')
     svg.append('<circle cx="64" cy="26" r="5" fill="#27C93F"/>')
@@ -260,12 +222,6 @@ def generate_svg(dot_matrix, logo1_pts, logo2_pts, logo3_pts, palette, is_dark, 
     svg.append(f'<text x="45" y="525" fill="{chrome_color}" font-size="12" opacity="0.8">► More about me &amp; projects below in README ↓</text>')
     
     # --- Layer 1: Portrait Bands ---
-    # Timing (14.2s loop matching PDF):
-    # 0s -> 3.0s (0.211): 100% visible
-    # 3.0s -> 4.3s (0.303): dissolve to opacity 0
-    # 4.3s -> 12.9s (0.908): opacity 0
-    # 12.9s -> 14.2s (1.000): return to opacity 1
-    
     keytimes_l1 = "0; 0.211; 0.303; 0.908; 1"
     opacity_l1 = "1; 1; 0; 0; 1"
     
@@ -289,17 +245,7 @@ def generate_svg(dot_matrix, logo1_pts, logo2_pts, logo3_pts, palette, is_dark, 
         svg.append('</g>')
     svg.append('</g>')
     
-    # --- Layer 2: Travellers (Morphing across 3 Procedural Logos) ---
-    # KeyTimes (14.2s loop):
-    # 0s -> 3.0s (0.211): hidden (opacity 0)
-    # 4.3s (0.303): Form Logo 1 (Sharingan Eye) - opacity 1
-    # 6.3s (0.444): Hold Logo 1 -> morph to Logo 2 (</> Code Glyph)
-    # 7.6s (0.535): Form Logo 2 (</> Code Glyph)
-    # 9.6s (0.676): Hold Logo 2 -> morph to Logo 3 (One Piece Skull)
-    # 10.9s (0.768): Form Logo 3 (One Piece Skull)
-    # 12.9s (0.908): Hold Logo 3 -> return to center
-    # 14.2s (1.000): hidden
-    
+    # --- Layer 2: Travellers (Morphing across 3 Dev Logos: Python -> Code -> Git) ---
     keytimes_l2 = "0; 0.211; 0.303; 0.444; 0.535; 0.676; 0.768; 0.908; 1"
     opacity_l2 = "0; 0; 0.95; 0.95; 0.95; 0.95; 0.95; 0; 0"
     
@@ -331,7 +277,7 @@ def generate_svg(dot_matrix, logo1_pts, logo2_pts, logo3_pts, palette, is_dark, 
     svg.append(f'<text x="15" y="9" fill="#EF4444" font-size="12" font-weight="bold">LIVE</text>')
     svg.append('</g>')
     
-    # Email Pill Badge (Purple like arifhaxn's screenshot!)
+    # Email Pill Badge
     svg.append(f'<g transform="translate(0, 18)">')
     svg.append(f'<rect x="0" y="0" width="220" height="26" rx="4" fill="{pill_color}"/>')
     svg.append(f'<text x="110" y="18" fill="white" font-size="13" text-anchor="middle" font-weight="bold">Afnaanahmed.k391@gmail.com</text>')
@@ -374,19 +320,19 @@ def generate_svg(dot_matrix, logo1_pts, logo2_pts, logo3_pts, palette, is_dark, 
     
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write("\n".join(svg))
-    print(f"Successfully generated {output_path}")
+    print(f"Generated {output_path}")
 
 def main():
-    print("[v3] Generating procedural vector logos...")
-    pts1 = generate_sharingan(num_points=NUM_TRAVELLERS)
+    print("Generating procedural developer logos (Python, Code, Git)...")
+    pts1 = generate_python_logo(num_points=NUM_TRAVELLERS)
     pts2_raw = generate_code_glyph(num_points=NUM_TRAVELLERS)
-    pts3_raw = generate_onepiece(num_points=NUM_TRAVELLERS)
+    pts3_raw = generate_git_branch(num_points=NUM_TRAVELLERS)
     
-    print("[v3] Running Hungarian optimal transport point alignment...")
+    print("[dev-logos] Running Hungarian optimal transport alignment...")
     pts2 = align_points(pts1, pts2_raw)
     pts3 = align_points(pts2, pts3_raw)
     
-    print("[v3] Processing portrait photo...")
+    print("[dev-logos] Processing portrait photo...")
     dark_portrait = process_portrait(PHOTO_PATH, is_dark=True)
     light_portrait = process_portrait(PHOTO_PATH, is_dark=False)
     
@@ -407,10 +353,10 @@ def main():
         }
     }
     
-    print("[v3] Building dark.svg...")
+    print("[dev-logos] Building dark.svg...")
     generate_svg(dark_portrait, pts1, pts2, pts3, palettes['dark'], True, os.path.join(ROOT, "dark.svg"))
     
-    print("[v3] Building light.svg...")
+    print("[dev-logos] Building light.svg...")
     generate_svg(light_portrait, pts1, pts2, pts3, palettes['light'], False, os.path.join(ROOT, "light.svg"))
 
 if __name__ == "__main__":
